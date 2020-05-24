@@ -12,11 +12,9 @@ function find() {
 }
 function findById(id) {
   id = Array.isArray(id) ? [id] : id;
-  return db("cars")
-    .where({ id })
-    .first()
-    .then((res) => console.log(res))
-    .catch((res) => console.log(res));
+  console.log("finding by ID ", id);
+
+  return db("cars").where({ id }).first();
 }
 
 function remove(id) {
